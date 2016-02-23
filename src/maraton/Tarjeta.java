@@ -27,6 +27,19 @@ public class Tarjeta extends RuleItem<Boolean,Integer>{
     public Boolean accion(Integer... resp) {
         return resp[0]==correcta;
     }
+
+    @Override
+    public String toString() {
+        
+        
+        String respuesta =  "Tarjeta{" + "categoria=" + categoria + ", pregunta=" + pregunta + ", opciones=";
+        for(int i = 0; i< opciones.length; i++)
+        {
+            respuesta+=opciones[i] +", ";
+        }
+        respuesta += "}";
+        return respuesta;
+    }
     
     
     

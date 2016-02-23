@@ -12,6 +12,11 @@ package maraton;
 public class Item {
     private String imagen;
 
+    public Item() {
+    }
+    
+    
+
     public Item(String imagen) {
         this.imagen = imagen;
     }
@@ -23,5 +28,11 @@ public class Item {
     public void setImagen(String imagen) {
         this.imagen = imagen;
     }
+
+    @Override
+    public String toString() {
+        return "Item{" + "imagen=" + imagen + '}';
+    }
+    
     
 }

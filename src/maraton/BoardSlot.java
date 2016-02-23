@@ -48,6 +48,10 @@ public class BoardSlot {
     public void setPlaceables(ArrayList<Placeable> placeables) {
         this.placeables = placeables;
     }
-    
+
+    @Override
+    public String toString() {
+        return "BoardSlot{" + "pos=" + pos + ", image=" + image + ", placeables=" + placeables + '}';
+    }
     
 }

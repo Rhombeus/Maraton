@@ -16,17 +16,18 @@ import java.util.Random;
 //Singleton
 public class Dado extends RuleItem<Integer,Void>{
     private static final Random R= new Random();
-    private Dado dado;
-    private Dado(String imagen) {
-        super(imagen);
+    private static Dado instanceDado;
+    
+    
+    private Dado() {
     }
     
-    public Dado getInstance(String imagen){
-        if(dado == null){
-            return new Dado(imagen);
-        }else{
-            return dado;
-        }
+    
+    public static Dado getInstance(){
+       if(instanceDado==null){
+           instanceDado=new Dado();
+       }
+       return instanceDado;
     }
     /* Facade
     public int tirarDado(){

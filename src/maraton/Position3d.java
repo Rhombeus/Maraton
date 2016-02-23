@@ -24,6 +24,12 @@ public class Position3d extends Position{
     public void setZ(int z) {
         this.z = z;
     }
+
+    @Override
+    public String toString() {
+        return "Position3d{"+super.toString() + "z=" + z + '}';
+    }
+    
     
     
 }

@@ -24,6 +24,11 @@ public class Placeable extends Item{
     public void setP(Position p) {
         this.p = p;
     }
+
+    @Override
+    public String toString() {
+        return "Placeable{" + "p=" + p + '}';
+    }
     
     
     

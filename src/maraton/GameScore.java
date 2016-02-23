@@ -19,4 +19,11 @@ public class GameScore<T> {
      public void setPlayerScore(Player p, T sc){
          score.replace(p, sc);
      }
+
+    @Override
+    public String toString() {
+        return "GameScore{" + "score=" + score + '}';
+    }
+     
+     
 }

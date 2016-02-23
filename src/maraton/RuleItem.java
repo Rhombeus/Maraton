@@ -14,6 +14,10 @@ public abstract class RuleItem<T,S> extends Item{
     public RuleItem(String imagen) {
         super(imagen);
     }
+
+    public RuleItem() {
+    }
+    
     
     public abstract T accion(S... args);
 }
