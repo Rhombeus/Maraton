@@ -14,7 +14,7 @@ import java.util.Random;
 
 
 //Singleton
-public class Dado extends RuleItem{
+public class Dado extends RuleItem<Integer,Void>{
     private static final Random R= new Random();
     private Dado dado;
     private Dado(String imagen) {
@@ -28,17 +28,15 @@ public class Dado extends RuleItem{
             return dado;
         }
     }
-
-    @Override
-    public Integer accion() {
-        System.out.println("Tirar dado");
-        Integer a=R.nextInt(6)+1;
-        return a;
-    }
     /* Facade
     public int tirarDado(){
         Random num = new Random();
         return num.nextInt(6) + 1;
-    }*/
-    
+    }*/   
+
+    @Override
+    public Integer accion(Void... args) {
+        Integer a=R.nextInt(6)+1;
+        return a;
+    }
 }

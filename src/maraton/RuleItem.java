@@ -9,11 +9,11 @@ package maraton;
  *
  * @author Leslie
  */
-public abstract class RuleItem<T> extends Item{
+public abstract class RuleItem<T,S> extends Item{
 
     public RuleItem(String imagen) {
         super(imagen);
     }
     
-    public abstract T accion();
+    public abstract T accion(S... args);
 }

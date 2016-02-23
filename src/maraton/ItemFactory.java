@@ -12,6 +12,6 @@ package maraton;
 public abstract class ItemFactory {
     
     public abstract Item crearItem(String imagen);
-    public abstract Item crearItem(String imagen, String cat, String preg, String[] op, String corr);
+    public abstract Item crearItem(String imagen, String cat, String preg, String[] op, int corr);
     
 }

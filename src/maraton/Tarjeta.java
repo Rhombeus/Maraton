@@ -9,24 +9,26 @@ package maraton;
  *
  * @author Leslie
  */
-public class Tarjeta extends RuleItem<Pregunta>{
+public class Tarjeta extends RuleItem<Boolean,Integer>{
     private String categoria;
     private String pregunta;
     private String[] opciones;
-    private String correcta; //respuesta correcta
+    private int correcta; //respuesta correcta
 
-    public Tarjeta(String imagen, String categoria, String pregunta, String[] opciones, String correcta) {
+    public Tarjeta(String imagen, String categoria, String pregunta, String[] opciones, int correcta) {
         super(imagen);
         this.categoria = categoria;
         this.pregunta = pregunta;
         this.opciones = opciones;
         this.correcta = correcta;
     }
-    
+
     @Override
-    public Pregunta accion() {
-        System.out.println("Tomar tarjeta");
+    public Boolean accion(Integer... resp) {
+        return resp[0]==correcta;
     }
+    
+    
     
     
 }

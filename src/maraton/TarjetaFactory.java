@@ -17,7 +17,7 @@ public class TarjetaFactory extends ItemFactory{
     }
 
     @Override
-    public Item crearItem(String imagen, String cat, String preg, String[] op, String corr) {
+    public Item crearItem(String imagen, String cat, String preg, String[] op, int corr) {
         return new Tarjeta(imagen, cat, preg, op, corr);
     }
 
