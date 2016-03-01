@@ -10,28 +10,23 @@ package maraton;
  * @author Leslie
  */
 public class Placeable extends Item{
-    Position p;
+    Position position;
 
     public Placeable(String imagen, Position p) {
         super(imagen);
-        this.p = p;
+        this.position = p;
     }
 
-    public Position getP() {
-        return p;
+    public Position getPosition() {
+        return position;
     }
 
-    public void setP(Position p) {
-        this.p = p;
+    public void setPosition(Position position) {
+        this.position = position;
     }
 
     @Override
     public String toString() {
-        return "Placeable{" + "p=" + p + '}';
-    }
-    
-    
-    
-    
-    
+        return "Placeable{" + "p=" + position + '}';
+    } 
 }

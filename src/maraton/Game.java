@@ -14,24 +14,24 @@ import java.util.ArrayList;
 public class Game {
     private String nombre;
     private GameBoard tablero;
-    private ArrayList<Player> jugadores;
+    private Players jugadores;
     private GameScore score;
     private static Game instance;
-    private int cPlayer=0;
+    private int currentPlayer=0;
     
     private Game(){
     }
 
-    public int getcPlayer() {
-        return cPlayer;
+    public int getCurrentPlayer() {
+        return currentPlayer;
     }
     
     public void nextPlayer(){
-        cPlayer ++;
-        if(cPlayer%jugadores.size()==0){
-            cPlayer=1; 
+        currentPlayer ++;
+        if(currentPlayer%jugadores.size()==0){
+            currentPlayer=1; 
         }else{
-           cPlayer=cPlayer%jugadores.size();
+           currentPlayer=currentPlayer%jugadores.size();
         }
         
         
@@ -61,11 +61,11 @@ public class Game {
         this.score = score;
     }
 
-    public ArrayList<Player> getJugadores() {
+    public Players getJugadores() {
         return jugadores;
     }
 
-    public void setJugadores(ArrayList<Player> jugadores) {
+    public void setJugadores(Players jugadores) {
         this.jugadores = jugadores;
     }
     

@@ -26,10 +26,10 @@ public class Maraton {
         juego.setNombre("PruebaMaraton");
         juego.setTablero(setupGBoard(30));
         
-        ArrayList<Player> jugs=new ArrayList<>();
-        jugs.add(new Player("Ignorancia"));
+        Players jugs=new Players();
+        jugs.addPlayer(new Player("Ignorancia"));
         for(int i=0;i<2;i++){
-            jugs.add(new Player("Jugador"+i));
+            jugs.addPlayer(new Player("Jugador"+i));
         }
         juego.setJugadores(jugs);
         juego.nextPlayer();
@@ -58,8 +58,8 @@ public class Maraton {
         Game g=setup();
         System.out.println(g);
         for(int i=0;i<5;i++){
-            PLayerFacade.tirarYSacarTarjeta(g.getJugadores().get(g.getcPlayer()), lec);
-            System.out.println(g);
+            PlayerFacade.tirarYSacarTarjeta(g.getJugadores().getPlayer(g.getCurrentPlayer()));
+            GuiSimulator.displayGameStatus(g);
             g.nextPlayer();
         }
     }

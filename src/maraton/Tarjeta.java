@@ -32,12 +32,12 @@ public class Tarjeta extends RuleItem<Boolean,Integer>{
     public String toString() {
         
         
-        String respuesta =  "Tarjeta{" + "categoria=" + categoria + ", pregunta=" + pregunta + ", opciones=";
+        String respuesta =  "Tarjeta{" + "categoria=" + categoria + ", pregunta=" + pregunta + ", opciones={";
         for(int i = 0; i< opciones.length; i++)
         {
             respuesta+=opciones[i] +", ";
         }
-        respuesta += "}";
+        respuesta += "}}";
         return respuesta;
     }
     

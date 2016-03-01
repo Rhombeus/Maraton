@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Player {
 
     private String nombre;
-    private ArrayList<Item> inventario;
+    private Inventario inventario;
     private Item represenacion;
     private Position pos;
     public Player(String nombre) {
@@ -46,11 +46,11 @@ public class Player {
         this.nombre = nombre;
     }
 
-    public ArrayList<Item> getInventario() {
+    public Inventario getInventario() {
         return inventario;
     }
 
-    public void setInventario(ArrayList<Item> inventario) {
+    public void setInventario(Inventario inventario) {
         this.inventario = inventario;
     }
 
